@@ -1,0 +1,157 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,700;1,800&display=swap');
+
+
+/* CONFIGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    cursor: crosshair;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: 'Bakbak One', cursive;
+}
+
+
+
+/* HOME */
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    background-image: url(/assets/img/bg-home.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main h1 {
+    font-size: 80px;
+    color: white;
+}
+
+main ul {
+    list-style: none;
+}
+
+main ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* OPTIONS */
+
+h2 {
+    color: white;
+    font-size: 40px;
+}
+
+.options {
+    color: white;
+}
+
+.options fieldset {
+    border: none;
+}
+
+.options label {
+    font-size: 28px;
+}
+
+.btn-back {
+    padding: 8px 20px;
+    border: 2px solid red;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: black;
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Bakbak One', cursive;
+    cursor: pointer;
+}
+
+/* SHOOTER */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/scenery-one.jpeg);
+    overflow: hidden;
+}
+
+.container .overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.container .gun {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.shooting {
+    animation: hithere 0.5s ease ;
+}
+
+/* 2 forwards = repetir animação */
+
+@keyframes swing {
+    20% {transform: rotate(8deg);}
+    40% {transform: rotate(8deg);}
+    60% { transform: rotate(3deg); }	
+	80% { transform: rotate(-3deg); }	
+	100% { transform: rotate(0deg); }
+}
+
+@keyframes hithere {
+    30% { transform: scale(1.2); }
+    /*40%, 60% { transform: rotate(-1deg) scale(1.2); }
+    50% { transform: rotate(1deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }*/
+  }
+
+.container .ammo-bar {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50px;
+    font-size: 60px;
+    color: yellow;
+}
+
+.target {
+    width: 200px;
+    z-index: 99;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+}
+
+.points {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    color: red;
+    margin-top: 10px;
+    margin-right: 20px;
+}
