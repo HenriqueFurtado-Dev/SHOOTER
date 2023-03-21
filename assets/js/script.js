@@ -47,6 +47,7 @@ function win() {
 
 function reload() {
     var reload = document.querySelector("#reload")
-    ammo.innerHTML = 30
+    ammunitation = 30
+    ammo.innerHTML = ammunitation
     reload.play()
 }
